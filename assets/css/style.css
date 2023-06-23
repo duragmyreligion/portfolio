@@ -1,0 +1,81 @@
+:root {
+    --void: #0E0B16;
+    --fuschia: #A239CA;
+    --jewel: #4717F6;
+    --stark: #E7DFDD;
+    --fonts: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+}
+/* #FAF9F6 #D2042D */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--void);
+}
+
+
+a {
+    color: var(--fuschia)
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    font-family: var(--fonts);
+    background-color: var(--void);
+    margin-left: -20px;
+    
+}
+
+.header h1 {
+    width: 415px;
+    font-size: 60px;
+    background-color: var(--fuschia);
+    color: var(--stark);
+    padding-left: 70px;
+}
+
+.header nav {
+    padding-top: 10px;
+    padding-left: 45%;
+    margin-right: 10px;
+    float: right;
+    font-family:var(--fonts);
+    font-size: 30px;
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.hero {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/outer-space.jpg");
+    background-size: cover;
+    background-position: 50% 55%;
+}
+
+.hero h2 {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin-left: 77%;
+    margin-top: 10%;
+    padding: 20px;
+    font-size: 38px;
+    font-family: var(--fonts);
+    background-color: var(--fuschia);
+    color: var(--stark);
+    box-shadow: 0 10px 10px 4px rgba(0, 0, 0, 1);
+}
