@@ -163,6 +163,7 @@ section h2 {
   top: 476px;
   max-height: 150px;
   max-width: 150px;
+  border: 3px solid var(--fuschia);
   box-shadow: 0 10px 10px 4px rgba(0, 0, 0, 1);
 }
 
@@ -273,9 +274,54 @@ div.container div.img5 p {
 .container>div:nth-of-type(3),
 .container>div:nth-of-type(4),
 .container>div:nth-of-type(5) {
-  max-height: 200px;
-  max-width: 485px;
+  height: 200px;
+  width: 485px;
   border: 5px solid var(--fuschia);
+}
+
+div.container div.img1,
+div.container div.img2,
+div.container div.img3,
+div.container div.img4,
+div.container div.img5 {
+  position: relative;
+}
+
+div.container div.img1::before,
+div.container div.img2::before,
+div.container div.img3::before,
+div.container div.img4::before,
+div.container div.img5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(162, 57, 202, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+div.container div.img1:hover::before,
+div.container div.img2:hover::before,
+div.container div.img3:hover::before,
+div.container div.img4:hover::before,
+div.container div.img5:hover::before {
+  background-color: transparent;
+}
+
+div.container div.img1 h3,
+div.container div.img1 p,
+div.container div.img2 h3,
+div.container div.img2 p,
+div.container div.img3 h3,
+div.container div.img3 p,
+div.container div.img4 h3,
+div.container div.img4 p,
+div.container div.img5 h3,
+div.container div.img5 p {
+  position: relative;
+  z-index: 1;
 }
 
 .img1 {
@@ -380,4 +426,103 @@ div.container div.img5 p {
   bottom: 0;
   width: 5px;
   background-color: var(--jewel);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .header h1 {
+    width: 100%;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .header nav {
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .hero h2 {
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  #about-me {
+    margin-bottom: 40px;
+  }
+
+  .para1,
+  .para2 {
+    margin-left: 0;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .para2 {
+    margin-top: 0;
+  }
+
+  #about-me img {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 20px auto;
+  }
+
+  #work {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+
+  .container>div:nth-of-type(1) {
+    grid-column: auto;
+    height: auto;
+    width: 100%;
+  }
+
+  .container>div:nth-of-type(2),
+  .container>div:nth-of-type(3),
+  .container>div:nth-of-type(4),
+  .container>div:nth-of-type(5) {
+    height: auto;
+    width: 100%;
+  }
+
+  div.container div.img1 h3,
+  div.container div.img2 h3,
+  div.container div.img3 h3,
+  div.container div.img4 h3,
+  div.container div.img5 h3 {
+    margin-top: 0;
+  }
+
+  .bottom-nav {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .vl1,
+  .vl2,
+  .vl3 {
+    display: none;
+  }
 }
